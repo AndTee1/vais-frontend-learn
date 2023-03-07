@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "plugin:nuxt/recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ],
+
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "vue/no-v-html": "off",
+    "no-empty": "off",
+    "vue/html-indent": "off",
+    "vue/html-self-closing": "off",
+    "vue/html-closing-bracket-newline": "off",
+    "vue/max-attributes-per-line": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@nrwl/nx/enforce-module-boundaries": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    ]
+  }
+}

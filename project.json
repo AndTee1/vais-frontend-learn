@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-guideline",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nuxt-guideline",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "install": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "dev": {
+          "cwd": "packages/nuxt-guideline",
+          "command": "yarn"
+        }
+      },
+      "defaultConfiguration": "dev"
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "dev": {
+          "cwd": "packages/nuxt-guideline",
+          "commands": ["npx nuxi build"]
+        }
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "dev": {
+          "cwd": "packages/nuxt-guideline",
+          "command": "npx nuxi dev"
+        }
+      },
+      "defaultConfiguration": "dev"
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "dev": {
+          "cwd": "packages/nuxt-guideline",
+          "commands": ["npx nuxi build", "npx nuxi generate"]
+        }
+      }
+    }
+  }
+}
